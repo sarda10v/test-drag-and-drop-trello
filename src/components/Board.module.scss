@@ -22,12 +22,22 @@
     }
     .item {
       width: 100%;
-      border: 2px solid lightpink;
+      // border: 2px solid lightpink;
       padding: 10px;
       border-radius: 6px;
       margin: 5px 0;
-      cursor: grab;
+      cursor: pointer;
       background-color: #fcfcf9;
     }
+  }
+}
+details {
+  width: 350px;
+  background-color: #eee;
+  padding: 1rem;
+  margin: auto;
+  p {
+    text-align: justify;
+    margin: 5px;
   }
 }

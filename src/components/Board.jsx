@@ -5,18 +5,39 @@ const Board = () => {
   const [boards, setBoards] = useState([
     {
       id: 1,
-      title: "Срочные дела",
-      items: [{ id: 1, title: "Сдать тестовое задание" }],
+      title: "JAVASCRIPT",
+      items: [
+        {
+          id: 1,
+          question: "Как проверить, является ли значение массивом?",
+          answer: "Через метод Array.isArray!",
+        },
+        ,
+      ],
     },
     {
       id: 2,
-      title: "Можно отложить",
-      items: [{ id: 1, title: "Посмотреть фильм" }],
+      title: "REACT",
+      items: [
+        {
+          id: 1,
+          question: "Что такое пропсы?",
+          answer:
+            "Props — это входные данные React-компонентов, передаваемые от родительского компонента дочернему компоненту.",
+        },
+      ],
     },
     {
       id: 3,
-      title: "Законченные дела",
-      items: [{ id: 1, title: "Пойти в магазин за хлебом" }],
+      title: "HTML && CSS",
+      items: [
+        {
+          id: 1,
+          question: "Разница между div и span?",
+          answer:
+            "Тег <div> — это блочный элемент, обычно используется для определения какого-то крупного блока на странице - у него свойство display: block, а тег <span> — это строчный элемент, для мелких фразовых элементов - у него свойство display: inline.",
+        },
+      ],
     },
   ]);
 
@@ -101,7 +122,10 @@ const Board = () => {
                 onDrop={(e) => dropHandler(e, board, item)}
                 className={styles.item}
               >
-                {item.title}
+                <details>
+                  <summary> {item.question}</summary>
+                  <p>Ответ: {item.answer}</p>
+                </details>
               </div>
             ))}
           </div>
